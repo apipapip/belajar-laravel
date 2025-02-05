@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('main');
 
 Route::get('/home', function (){
     $member=array('apisuki','anggastore','rejomok','aliqadal','apip raja garam','andicka');
@@ -13,17 +13,20 @@ Route::get('/home', function (){
         "nama"=>"Ajay",
         "kelas"=>"XI RPL",
         "alamat"=>"Opak",
-        "member"=>$member  
+        "member"=>$member ,
+        "menu"=>"member" 
     ]);
-});
+})->name('member');
 
 Route::get('/try',
     [belajar_controller::class,
-    'index']);
+    'index'])->name('latihan');
 
 Route::get('/biodata',[belajar_controller::class,
-            'biodata']);
+            'biodata'])->name('biodata');
 
 Route::get('/sbadmin',function (){
-    return view('index');
-});
+    return view('index',[
+        "menu"=>"dashboard",
+    ]);
+})->name('dashboard');

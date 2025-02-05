@@ -12,13 +12,12 @@
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('dist/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{asset('dist/css/sb-admin-2.min.css')}}" rel="stylesheet">
-     @yield('style')
+    @yield('style')
 </head>
 
 <body id="page-top">
@@ -26,7 +25,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-       @include('templates.sidebar')
+        @include('templates.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -34,14 +33,15 @@
 
             <!-- Main Content -->
             <div id="content">
-         
-               
+                @include('templates.navbar')
+
+
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                @yield('kontent')
+                    @yield('kontent')
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                   
+
                     </div>
                 </div>
                 <!-- /.container-fluid -->
@@ -50,13 +50,13 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-gray-400">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
-            </footer>
+            </footer> 
             <!-- End of Footer -->
 
         </div>

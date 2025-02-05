@@ -13,14 +13,16 @@ class belajar_controller extends Controller
         ('dddd,D MMMM Y');
         return view('latihan',[
             "judul"=>"belajar laravel",
-            "tanggal"=>$tanggal
+            "tanggal"=>$tanggal,
+            'menu'=>'latihan'
         ]);
     }
 
     public function biodata(){
         $biodata=new biodata();
         return view('biodata',[
-            'biodata'=> $biodata->biodata()
+            'biodata'=> $biodata->biodata(),
+            'menu'=>'biodata'
         ]); 
     }
 }
