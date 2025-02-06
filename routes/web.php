@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\belajar_controller;
+use App\Http\Controllers\lokalcontroller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,15 +19,19 @@ Route::get('/home', function (){
     ]);
 })->name('member');
 
-Route::get('/try',
-    [belajar_controller::class,
-    'index'])->name('latihan');
+Route::get('/try', [belajar_controller::class,'index'])->name('latihan');
 
-Route::get('/biodata',[belajar_controller::class,
-            'biodata'])->name('biodata');
+Route::get('/biodata',[belajar_controller::class, 'biodata'])->name('biodata');
 
 Route::get('/sbadmin',function (){
     return view('index',[
         "menu"=>"dashboard",
     ]);
 })->name('dashboard');
+
+Route::get('/lokal',[lokalcontroller::class,'index'])->name('lokal.index');
+
+Route::get('/lokal/tambah',[lokalcontroller::class,'create'])->name('lokal.create');
+
+Route::get('/lokal',[lokalcontroller::class,'store'])->name('lokal.store');
+

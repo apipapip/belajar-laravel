@@ -8,7 +8,7 @@
     }
 
     h5 {
-        color:gray
+        color:gray;
         text-align: justify;
     }
     h2{
@@ -20,8 +20,8 @@
 <h1>
     Halaman Index
 </h1>
-<div class="col">
-    <div class="row">
+<div class="row">
+    <div class="col">
         <div class="card">
             <div class="card-header">
                 <h2>Index</h2>
@@ -39,8 +39,7 @@
                     suscipit. Sequi optio consectetur corporis architecto laborum, impedit nesciunt voluptatibus libero
                     sint dolorem illum ullam ex accusamus? Adipisci neque in ab, aliquid fuga iste cumque rerum natus at
                     quasi atque laborum maiores dignissimos, quas quia numquam nulla sunt nisi ipsum, cupiditate commodi?
-                    Eaque suscipit incidunt provident quod praesentium!</h5>
-
+                    Eaque suscipit incidunt provident quod praesentium!</h5
             </div>
         </div>
     </div>

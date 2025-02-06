@@ -26,3 +26,5 @@ class belajar_controller extends Controller
         ]); 
     }
 }
+
+

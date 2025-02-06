@@ -37,6 +37,12 @@
                     <i class="fas fa-users"></i>
                     <span>Friend List</span></a>
             </li>
+            
+            <li class="nav-item {{$menu === 'lokal' ?  'active' : ''}}">
+                <a class="nav-link" href="{{route('lokal.index')}}">
+                    <i class="fas fa-users"></i>
+                    <span>Lokal</span></a>
+            </li>
            
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
