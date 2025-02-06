@@ -33,5 +33,5 @@ Route::get('/lokal',[lokalcontroller::class,'index'])->name('lokal.index');
 
 Route::get('/lokal/tambah',[lokalcontroller::class,'create'])->name('lokal.create');
 
-Route::get('/lokal',[lokalcontroller::class,'store'])->name('lokal.store');
+Route::post('/lokal',[lokalcontroller::class,'store'])->name('lokal.store');
 

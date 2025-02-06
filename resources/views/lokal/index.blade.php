@@ -1,7 +1,6 @@
 @extends('templates.layout')
 @section('halaman_judul','data kelas')
 @section('kontent')
-<a href="{{route('lokal.create')}}" class="btn btn-danger mb-3">Tambah Data</a>
 <div class="row">
     <div class="col">
         <div class="card">
@@ -27,12 +26,13 @@
                 <tbody>
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$dk['nama']}}</td>
-                        <td>{{$dk['kelas']}}</td>
+                        <td>{{$dk['wali_kelas']}}</td>
+                        <td>{{$dk['nama_kelas']}}</td>
                     </tr>
                 </tbody>
                 @endforeach
             </table>
+            <a href="{{route('lokal.create')}}" class="btn btn-danger mb-3 float-right">Tambah Data</a>
         </div>
     </div>
         </div>
