@@ -20,7 +20,7 @@ class lokalcontroller extends Controller
         return view('lokal.create',[
         "menu"=>"create"]);
     }
-      public function store(Request $request){
+      public function store(Request $request){ 
         $validasi=$request->validate([
             'wali_kelas'=>'required',
             'nama_kelas'=>'required'
@@ -32,6 +32,36 @@ class lokalcontroller extends Controller
 
         return redirect(route('lokal.index'));
       }
-}
+
+      public function edit($a_id){
+        $data_kelas=lokal::find($a_id);
+        return view('lokal.edit',[
+            "menu"=>"lokal",
+            "data_kelas"=>$data_kelas
+        ]);
+      }
+
+      public function update(){
+        $validasi=request()->validate([
+            "id"=>"required",
+            "nama_kelas"=>"required",
+            "wali_kelas"=>"required"
+        ]);
+        $data_kelas=lokal::find($validasi['id']);
+        $data_kelas->nama_kelas=$validasi['nama_kelas'];
+        $data_kelas->wali_kelas=$validasi['wali_kelas'];
+        $data_kelas->save();
+
+        return redirect(route('lokal.index'));
+      }
+
+      public function destroy($a_id){
+        $data_kelas=lokal::find($a_id);
+        $data_kelas->delete();
+
+        return redirect(route('lokal.index'));
+        }
+      }
+
 
 

@@ -33,5 +33,11 @@ Route::get('/lokal',[lokalcontroller::class,'index'])->name('lokal.index');
 
 Route::get('/lokal/tambah',[lokalcontroller::class,'create'])->name('lokal.create');
 
-Route::post('/lokal',[lokalcontroller::class,'store'])->name('lokal.store');
+Route::post('/lokal',[lokalcontroller::class,'store'])->name('lokal.store'); 
+
+Route::get('/lokal/edit/{id}',[lokalcontroller::class,'edit'])->name('lokal.edit');
+
+Route::delete('/lokal/delete/{id}',[lokalcontroller::class,'destroy'])->name('lokal.hapus');
+
+Route::put('/lokal/update',[lokalcontroller::class,'update'])->name('lokal.update');
 
