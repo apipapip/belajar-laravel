@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\belajar_controller;
 use App\Http\Controllers\lokalcontroller;
+use App\Http\Controllers\siswacontroller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -41,3 +42,4 @@ Route::delete('/lokal/delete/{id}',[lokalcontroller::class,'destroy'])->name('lo
 
 Route::put('/lokal/update',[lokalcontroller::class,'update'])->name('lokal.update');
 
+Route::resource('siswa',siswacontroller::class);

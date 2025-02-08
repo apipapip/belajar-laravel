@@ -62,6 +62,3 @@ class lokalcontroller extends Controller
         return redirect(route('lokal.index'));
         }
       }
-
-
-

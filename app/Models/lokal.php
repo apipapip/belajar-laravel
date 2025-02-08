@@ -8,4 +8,8 @@ class lokal extends Model
 {
     //
     protected $fillable= ['nama_kelas','wali_kelas'];
+
+    public function siswa(){
+        return $this->hasMany(siswa::class);
+    }
 }

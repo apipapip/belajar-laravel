@@ -43,6 +43,12 @@
                     <i class="fas fa-users"></i>
                     <span>Lokal</span></a>
             </li>
+
+            <li class="nav-item {{$menu === 'siswa' ?  'active' : ''}}">
+                <a class="nav-link" href="{{route('siswa.index')}}">
+                    <i class="fas fa-user"></i>
+                    <span>Siswa</span></a>
+            </li>
            
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
